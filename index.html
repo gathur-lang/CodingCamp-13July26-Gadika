@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>To-Do List Dashboard</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <header class="hero">
+      <div>
+        <p class="small-label">Welcome back 👋</p>
+        <h1 id="greeting"></h1>
+        <p class="meta" id="timeDisplay">Loading current time...</p>
+      </div>
+      <button id="themeToggle" class="pill">Dark mode</button>
+    </header>
+
+    <main>
+      <section class="card timer-card">
+        <div class="section-header">
+          <div>
+            <p class="small-label">⌛ Focus timer</p>
+            <h2>25-Minute Timer</h2>
+          </div>
+          <div class="status-pill" id="timerStatus">🏁</div>
+        </div>
+        <div class="timer-display" id="timerDisplay">25:00</div>
+        <div class="button-row">
+          <button id="startTimer" class="button">Start</button>
+          <button id="stopTimer" class="button button-secondary">Stop</button>
+          <button id="resetTimer" class="button button-secondary">Reset</button>
+        </div>
+      </section>
+
+    <div class="dashboard-columns">
+      <section class="card tasks-card">
+        <div class="section-header">
+          <div>
+            <p class="small-label"> 📋 To-do list</p>
+            <h2>My Tasks</h2>
+          </div>
+          <button id="sortTasks" class="pill">Sort tasks</button>
+        </div>
+        <form id="taskForm" class="inline-form">
+          <input id="taskInput" type="text" placeholder="Add a task" aria-label="Add a task" />
+          <button class="button" type="submit">Add</button>
+        </form>
+        <ul id="taskList" class="task-list"></ul>
+      </section>
+
+      <section class="card links-card">
+        <div class="section-header">
+          <div>
+            <p class="small-label"> 🔗 Quick links</p>
+            <h2>Favorite Websites</h2>
+          </div>
+        </div>
+        <form id="linkForm" class="inline-form">
+          <input id="linkTitle" type="text" placeholder="Title" aria-label="Link title" />
+          <input id="linkUrl" type="url" placeholder="https://example.com" aria-label="Link URL" />
+          <button class="button" type="submit">Save</button>
+        </form>
+        <div id="linkButtons" class="link-grid"></div>
+      </section>
+    </main>
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
